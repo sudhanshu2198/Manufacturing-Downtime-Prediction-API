@@ -39,7 +39,7 @@ def train(dataset_pth):
 
 if __name__=="__main__":
     parser=argparse.ArgumentParser()
-    parser.add_argument("--dataset_pth",default="Manufacturing_Defect_Dataset.csv")
+    parser.add_argument("--dataset_pth",default="/home/sudhanshu/manufacturing_defect/Manufacturing_Downtime_Dataset.csv")
     args=parser.parse_args()
     results=train(args.dataset_pth)
 
