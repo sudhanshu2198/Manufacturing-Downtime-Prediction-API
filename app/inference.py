@@ -1,13 +1,26 @@
+import os
 import joblib
 import numpy as np
 
 def predict(array):
-    label_idx_mapping={0:"No",
-                       1:"Yes"}
-    trained_model=joblib.load("model.pkl")
+    label_value_mapping={"No_Machine_Failure":"No",
+                         "Machine_Failure":"Yes"}
+    cwd=os.getcwd()
 
-    idx=trained_model.predict(array)[0].item()
-    confidence=np.max(trained_model.predict_proba(array)).item()
+    transform_pth=os.path.join(cwd,"app","transform.pkl")
+    transform=joblib.load(transform_pth)
 
-    return {"Downtime":label_idx_mapping[idx],
+    encoder_pth=os.path.join(cwd,"app","encoder.pkl")
+    encoder=joblib.load(encoder_pth)
+
+    scaled_array=transform.transform(array)
+
+    model_pth=os.path.join(cwd,"app","model.pkl")
+    trained_model=joblib.load(model_pth)
+
+    idx=trained_model.predict(scaled_array)[0].item()
+    label=encoder.inverse_transform([idx]).item()
+    confidence=np.max(trained_model.predict_proba(scaled_array)).item()
+
+    return {"Downtime":label_value_mapping[label],
             "Confidence":confidence}

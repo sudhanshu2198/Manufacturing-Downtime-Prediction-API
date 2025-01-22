@@ -1,3 +1,4 @@
+import os
 import numpy as np
 import pandas as pd
 from sklearn.metrics import accuracy_score
@@ -32,7 +33,14 @@ def train(dataset_pth):
         model.fit(X_train,y_train)
         predict=model.predict(X_test)
 
-        joblib.dump(model,"model.pkl")
+        cwd=os.getcwd()
+        transform_pth=os.path.join(cwd,"app","transform.pkl")
+        encoder_pth=os.path.join(cwd,"app","encoder.pkl")
+        model_pth=os.path.join(cwd,"app","model.pkl")
+
+        joblib.dump(transform,transform_pth)
+        joblib.dump(encoder,encoder_pth)
+        joblib.dump(model,model_pth)
 
         return {"Accuracy":accuracy_score(y_test,predict),
                 "F1_Score":f1_score(y_test,predict)}
