@@ -1,6 +1,7 @@
 # Manufacturing Downtime Prediction
 
 ## Project Links: 
+* **[RestAPI Demo Video](https://www.loom.com/share/7c66eb8b988d470db12725c567072ba8?sid=77da2c69-abbb-4846-bc3c-5f2cb099950f)**
 * **[Detailed Kaggle Notebook](https://www.kaggle.com/code/sudhanshu2198/machine-defect-prediction)**
 
 ## Background
