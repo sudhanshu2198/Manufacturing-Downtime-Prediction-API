@@ -1,7 +1,6 @@
 # Manufacturing Downtime Prediction
 
 ## Project Links: 
-* **[Deployed FastAPI](https://omdena-jakarta-traffic-system.streamlit.app/)**
 * **[Detailed Kaggle Notebook](https://www.kaggle.com/code/sudhanshu2198/machine-defect-prediction)**
 
 ## Background
