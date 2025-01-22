@@ -16,6 +16,25 @@
   - Coolant_Temperature
 - Target
   - Downtime
+ 
+## Plots
+
+RandomForest Model is using for modelling the relation between features and target variable in Manufacturing Downtime Dataset.
+
+- Accuracy: **0.9897**
+- F1_Score: **0.9896**
+
+#### Feature Correlation
+![](https://github.com/sudhanshu2198/Manufacturing-Downtime-Prediction-API/blob/main/plots/Feature_Correlation.jpg)
+
+#### Feature Importance
+![](https://github.com/sudhanshu2198/Manufacturing-Downtime-Prediction-API/blob/main/plots/Feature_importance.jpg)
+
+#### Confusion Matrix
+![](https://github.com/sudhanshu2198/Manufacturing-Downtime-Prediction-API/blob/main/plots/Confusion_Matrix.jpg)
+
+## 🛠 Skills
+Numpy, Pandas, Scikit-learn, FastAPI,  Git
 
 ## Directory Tree
 ```bash
@@ -135,18 +154,4 @@ Response 2
   "Confidence": 0.98
 }
 ```
-
-## Plots
-
-RandomForest Model is using for modelling the relation between features and target variable in Manufacturing Downtime Dataset.
-
-- Accuracy: **0.9897**
-- F1_Score: **0.9896**
-
-#### Feature Correlation
-#### Feature Importance
-#### Confusion Matrix
-
-## 🛠 Skills
-Numpy, Pandas, Scikit-learn, FastAPI,  Git
 
