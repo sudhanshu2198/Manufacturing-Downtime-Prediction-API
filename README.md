@@ -66,7 +66,12 @@ Create Virtaul Environment and install dependencies
 
 ```bash
   python3 -m venv venv
+
+linux
   source venv/bin/activate
+windows
+  venv\Scripts\activate
+
   pip install -r requirements.txt
 ```
 
